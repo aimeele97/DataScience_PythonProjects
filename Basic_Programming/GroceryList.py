@@ -1,3 +1,15 @@
+# Grocery List Program
+
+## This Python program allows users to create and manage a grocery list. Users can input items, check if specific items are in the list, and view the total cost of the groceries.
+
+## Features
+
+### - **Input Groceries**: Add items and their prices to your grocery list.
+### - **View List**: Display the grocery list along with the total cost.
+### - **Check Item Existence**: Verify if specific items are in the list.
+
+
+
 class GroceryList:
     def __init__ (self, name):
         self.name = name
