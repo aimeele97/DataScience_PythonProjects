@@ -1,2 +1,2 @@
-- Python code for data cleaning: [Code](./shopee_cat_generation.ipynb)
+- Python code for data cleaning: [Python Code](./shopee_cat_generation.ipynb)
 - Data Visualization: [Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/ShopeeMallDashboardotherversion/Dashboard1)
