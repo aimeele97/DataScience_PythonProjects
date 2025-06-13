@@ -103,7 +103,3 @@ To explore these projects locally:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/aimeele97/Python_Projects/blob/main/LICENSE) file for details.
-
----
-
-Feel free to customize this template further to align with each project's specific details and your personal branding.
