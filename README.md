@@ -53,13 +53,7 @@ Welcome to my collection of Python-based data science projects. This repository 
 * **Objective**: Analyze Shopee store performance metrics.
 * **Key Skills**: Data analysis, performance metrics evaluation.
 * **Link**: [Project8\_Shopee\_Store\_Performance](https://github.com/aimeele97/Python_Projects/tree/main/Project8_Shopee_Store_Performance)
-
-### 9. **python-code-for-preferences-FreeCodeCamp**
-
-* **Objective**: Implement preference algorithms.
-* **Key Skills**: Algorithm development, preference modeling.
-* **Link**: [python-code-for-preferences-FreeCodeCamp](https://github.com/aimeele97/Python_Projects/tree/main/python-code-for-preferences-FreeCodeCamp)
-
+  
 ---
 
 ## 🛠️ Technologies Used
