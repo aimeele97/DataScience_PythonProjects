@@ -102,4 +102,4 @@ To explore these projects locally:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/aimeele97/Python_Projects/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/aimeele97/DataScience_PythonProjects/blob/main/LICENSE) file for details.
