@@ -1,7 +1,9 @@
 # Room Listings Scraper - Sydney
 
 ## Project Overview
-This project is a web scraping script designed to extract room rental listings from [ozflatmates.com](https://ozflatmates.com) for Sydney. The script automates the process of gathering room details such as the room description, suburb, price, and publish date from multiple pages of listings. The extracted data is saved into a CSV file (`room_listings.csv`) for easy analysis and further processing using tools like Python, Excel, or Tableau.
+This project is a web scraping script designed to extract room rental listings from [ozflatmates.com](https://ozflatmates.com) for Sydney. The script automates the process of gathering room details such as the room description, suburb, price, and publish date from multiple pages of listings. 
+
+[Source code](./src.ipynb)  
 
 ## Features
 - Scrapes room listings from six pages of room rentals in Sydney.
