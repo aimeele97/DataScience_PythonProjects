@@ -9,8 +9,8 @@
 ---
 ## 📚 Table of Contents
 - [Overview](#overview)
-- [Key features](#key-features)
-- [Target Audiences](#target-audiences)
+    - [Key features](#key-features)
+    - [Target Audiences](#target-audiences)
 - [Data source](#data-source)
 - [Data processing](#data-processing)
 - [Key insights](#key-insights)
