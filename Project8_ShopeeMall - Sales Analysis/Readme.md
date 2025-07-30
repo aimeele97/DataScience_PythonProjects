@@ -9,34 +9,29 @@
 ---
 ## 📚 Table of Contents
 <!-- TOC -->
-
-- [Past 28-day sales overview by store on Shopee Mall Vietnam platform](#past-28-day-sales-overview-by-store-on-shopee-mall-vietnam-platform)
-    - [📚 Table of Contents](#-table-of-contents)
-    - [Overview](#overview)
-            - [Key findings](#key-findings)
-            - [Target Audiences](#target-audiences)
-    - [Data source](#data-source)
-        - [📅 **Data Collection Period**](#-data-collection-period)
-    - [Data processing](#data-processing)
-    - [Key insights](#key-insights)
-        - [Market Analysis](#market-analysis)
-            - [User engagement metrics](#user-engagement-metrics)
-            - [Sales trend](#sales-trend)
-            - [Best selling](#best-selling)
-        - [Store Analysis Example: TP-Link Official Store](#store-analysis-example-tp-link-official-store)
-            - [Sales Surge on October 27](#sales-surge-on-october-27)
-            - [Top-Performing Category: Home Security Cameras](#top-performing-category-home-security-cameras)
-            - [Underperforming Products: No Sales, No Views](#underperforming-products-no-sales-no-views)
-            - [Strategic Opportunities in Networking](#strategic-opportunities-in-networking)
-    - [Recommendations](#recommendations)
-        - [**Aspiring Shopee Sellers**](#aspiring-shopee-sellers)
-        - [**Existing E-commerce Businesses**](#existing-e-commerce-businesses)
-        - [**Researchers and Market Analysts**](#researchers-and-market-analysts)
-        - [**Platform Operators Shopee Mall**](#platform-operators-shopee-mall)
-    - [Final Note](#final-note)
+- [Overview](#overview)  
+    - [Key findings](#key-findings)  
+    - [Target Audiences](#target-audiences)  
+- [Data source](#data-source)
+- [Data processing](#data-processing)
+- [Key insights](#key-insights)
+    - [Market Analysis](#market-analysis)
+        - [User engagement metrics](#user-engagement-metrics)
+        - [Sales trend](#sales-trend)
+        - [Best selling](#best-selling)
+    - [Store Analysis Example: TP-Link Official Store](#store-analysis-example-tp-link-official-store)
+        - [Sales Surge on October 27](#sales-surge-on-october-27)
+        - [Top-Performing Category: Home Security Cameras](#top-performing-category-home-security-cameras)
+        - [Underperforming Products: No Sales, No Views](#underperforming-products-no-sales-no-views)
+        - [Strategic Opportunities in Networking](#strategic-opportunities-in-networking)
+- [Recommendations](#recommendations)
+    - [Aspiring Shopee Sellers](#aspiring-shopee-sellers)
+    - [Existing E-commerce Businesses](#existing-e-commerce-businesses)
+    - [Researchers and Market Analysts](#researchers-and-market-analysts)
+    - [Platform Operators Shopee Mall](#platform-operators-shopee-mall)
+- [Final Note](#final-note)
 
 <!-- /TOC -->
-
 ---
 
 ## Overview
