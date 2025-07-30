@@ -12,7 +12,7 @@
     - [Key features](#key-features)
     - [Target Audiences](#target-audiences)
 - [Data source](#data-source)
-- [Data processing](#data-processing)
+- [Data reprocessing](#data-reprocessing)
 - [Key insights](#key-insights)
     - [Market Analysis](#market-analysis)
         - [User engagement metrics](#user-engagement-metrics)
