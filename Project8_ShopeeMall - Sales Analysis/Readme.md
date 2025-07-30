@@ -124,12 +124,11 @@ Create a `product category column` for market category insights by manually defi
 
 #### User engagement metrics
 
-Views decreased by 23.6%, there was a noticeable spike in views on October 8th, suggesting a specific event, promotion, or external factor temporarily boosted interest at the start of the period. After that peak, views fluctuated but didn’t maintain that high level, indicating unstable or waning engagement over the rest of the 28 days. 
+`Views` decreased by 23.6%, there was a noticeable spike in views on October 8th, suggesting a specific event, promotion, or external factor temporarily boosted interest at the start of the period. After that peak, views fluctuated but didn’t maintain that high level, indicating unstable or waning engagement over the rest of the 28 days. 
 
-Likes dropped by 84.8%, which could be a result of decreased views or product-related issues. However, comment count surged by 75%, potentially reflecting either positive or negative buyer feedback after purchase. 
+`Likes` dropped by 84.8%, which could be a result of decreased views or product-related issues. However, `comment` count surged by 75%, potentially reflecting either positive or negative buyer feedback after purchase. If overall ratings remain high, this may be a positive sign; otherwise, it could signal problems. 
 
-If overall ratings remain high, this may be a positive sign; otherwise, it could signal problems. This shift suggests changing engagement patterns rather than a straightforward decline. Further analysis is needed to better understand these dynamics and their root causes.
-
+This shift suggests changing engagement patterns rather than a straightforward decline. Further analysis is needed to better understand these dynamics and their root causes.
 
 ![alt text](img/image-4.png)
 
@@ -140,11 +139,13 @@ Despite the decline in user interactions, sales increased over the past 28 days�
 
 #### Best selling
 
-In the last 28 days, mice sold the most units, with the Wireless Logitech Mouse being the favorite. The Apple Magic Mouse, though sold less, made the most money because it’s a premium product. Phones made the most revenue overall, led by the Apple iPhone 11 64GB. apple 20W poer adapter sold the most phones by quantity. This indicates a clear market split between popular affordable products and high-revenue premium devices.
+Over the past 28 days, **mice** were the top-selling category by unit volume, led by the Wireless Logitech Mouse. Although the Apple Magic Mouse had a lower sales volume, it generated the highest revenue within the category due to its premium pricing. These trends highlight a clear market divide between high-volume, affordable products and lower-volume, high-revenue premium devices.
 
 ![alt text](img/image-6.png)
 
-![alt text](img/image-7.png)
+Overall, **phones** generated the highest revenue, driven primarily by the Apple iPhone 11 64GB, followed by the iPhone 12 Pro Max 128GB. This suggests Apple’s continued dominance in the smartphone market and indicates that new product releases or brand loyalty significantly influence consumer spending.
+
+![alt text](img/image.png)
 
 ### Store Analysis Example: TP-Link Official Store
 
