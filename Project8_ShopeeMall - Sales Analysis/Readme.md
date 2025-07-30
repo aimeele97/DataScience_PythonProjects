@@ -5,12 +5,14 @@
 > **Source code:** [`Data reprocessing - Python code`](data_reprocessing_category.ipynb)  
 > **Dashboard:** [Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/ShopeeMallDashboardotherversion/Dashboard1)
 
----
+
+--
 ## 📚 Table of Contents
 <!-- TOC -->
 
 - [Past 28-day sales overview by store on Shopee Mall Vietnam platform](#past-28-day-sales-overview-by-store-on-shopee-mall-vietnam-platform)
     - [📚 Table of Contents](#-table-of-contents)
+    - [Overview](#overview)
     - [Data source](#data-source)
         - [📅 **Data Collection Period**](#-data-collection-period)
     - [Data processing](#data-processing)
@@ -31,7 +33,26 @@
         - [**Platform Operators Shopee Mall**](#platform-operators-shopee-mall)
     - [Final Note](#final-note)
 
-<!-- /TOC --> by store or category to customize the view.
+<!-- /TOC -->
+Build a dynamic and insightful dashboard to visualize the **sales performance of computer-related stores** on **Shopee Mall Vietnam** over the past **28 days**. The dashboard enables users to explore both **store-level** and **category-level** sales trends across a curated selection of **15 electronics and computer stores**.
+
+![Dashboard 1](./img/dashboard1.png)  
+
+![Dashboard 2](./img/dashboard2.png)
+
+---
+
+**Key Features**
+
+📊 **Sales Performance Tracking**
+
+* Visualize daily trends in **views**, **customer interactions**, **items sold**, and **revenue** for each store.
+* Compare performance over the **last 28 days vs. the previous 28 days** to evaluate growth or decline.
+
+📈 **Trend Visualization**
+
+* Identify seasonal patterns, spikes, and dips in performance using **bar charts** and **interactive graphs**.
+* Filter data by store or category to customize the view.
 
 📂 **Category Insights & Product Analysis**
 
