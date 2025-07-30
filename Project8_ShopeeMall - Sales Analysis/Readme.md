@@ -1,7 +1,7 @@
 # Shopee Mall Vietnam: 28-Day Sales Overview by Store
 
 > **Tools:** Jupyter Notebook, Python, Tableau  
-> **Techniques:** Data pre-processing, Analysis, Visualizaton  
+> **Techniques:** Data re-processing, Analysis, Visualizaton  
 > **Source code:** [`Data reprocessing - Python code`](data_reprocessing_category.ipynb)  
 > **Dashboard:** [Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/ShopeeMallDashboardotherversion/Dashboard1)
 
