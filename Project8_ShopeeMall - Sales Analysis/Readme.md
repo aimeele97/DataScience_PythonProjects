@@ -35,7 +35,7 @@
   
 Build a dynamic and insightful dashboard to visualize the **sales performance of computer-related stores** on **Shopee Mall Vietnam** over the past **28 days**. The dashboard enables users to explore both **store-level** and **category-level** sales trends across a curated selection of **15 electronics and computer stores**.
 
-![alt text](img/image.png)
+![alt text](img/dashboard.png)
 
 ![alt text](img/image-3.png)
 
