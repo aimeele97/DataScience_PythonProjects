@@ -52,7 +52,6 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 
 * Identify seasonal patterns, spikes, and dips in performance using **bar charts** and **interactive graphs**.
 * Filter data by store or category to customize the view.
-
 📂 **Category Insights & Product Analysis**
 
 * Analyze **aggregated sales by product category** (e.g., laptops, accessories, components) across all 15 stores.
@@ -113,9 +112,11 @@ The following columns are used for visualizations and performance insights:
 
   * `product_current_status`, `currency`, `product_current_stock`, `statistic_date`
 
-## Data processing
+## Data reprocessing
 
-Create a `product category column` for market category insights by manually defining and translating category names using Python in a Jupyter Notebook, utilizing the `pandas` package.
+Create a `product category column` for market category insights by manually defining and translating category names using Python in a Jupyter Notebook, utilizing the `pandas` package.  
+
+**Source code:** [`Data reprocessing - Python code`](data_reprocessing_category.ipynb)  
 
 ## Key insights
 
