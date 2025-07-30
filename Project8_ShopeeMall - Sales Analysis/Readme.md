@@ -1,7 +1,7 @@
 # Past 28-day sales overview by store on Shopee Mall Vietnam platform
 
 > **Tools:** Jupyter Notebook, Python, Tableau  
-> **Techniques:** Data pre-processing, Analysis, Visualizaton
+> **Techniques:** Data pre-processing, Analysis, Visualizaton  
 > **Source code:** [`Data reprocessing - Python code`](data_reprocessing_category.ipynb)  
 > **Dashboard:** [Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/ShopeeMallDashboardotherversion/Dashboard1)
 
@@ -9,27 +9,32 @@
 ---
 ## 📚 Table of Contents
 <!-- TOC -->
-- [Overview](#overview)  
-    - [Key findings](#key-findings)  
-    - [Target Audiences](#target-audiences)  
-- [Data source](#data-source)
-- [Data processing](#data-processing)
-- [Key insights](#key-insights)
-    - [Market Analysis](#market-analysis)
-        - [User engagement metrics](#user-engagement-metrics)
-        - [Sales trend](#sales-trend)
-        - [Best selling](#best-selling)
-    - [Store Analysis Example: TP-Link Official Store](#store-analysis-example-tp-link-official-store)
-        - [Sales Surge on October 27](#sales-surge-on-october-27)
-        - [Top-Performing Category: Home Security Cameras](#top-performing-category-home-security-cameras)
-        - [Underperforming Products: No Sales, No Views](#underperforming-products-no-sales-no-views)
-        - [Strategic Opportunities in Networking](#strategic-opportunities-in-networking)
-- [Recommendations](#recommendations)
-    - [Aspiring Shopee Sellers](#aspiring-shopee-sellers)
-    - [Existing E-commerce Businesses](#existing-e-commerce-businesses)
-    - [Researchers and Market Analysts](#researchers-and-market-analysts)
-    - [Platform Operators Shopee Mall](#platform-operators-shopee-mall)
-- [Final Note](#final-note)
+
+- [Past 28-day sales overview by store on Shopee Mall Vietnam platform](#past-28-day-sales-overview-by-store-on-shopee-mall-vietnam-platform)
+    - [📚 Table of Contents](#-table-of-contents)
+- [Overview](#overview)
+    - [Key findings](#key-findings)
+        - [Key Features](#key-features)
+    - [Target Audiences](#target-audiences)
+    - [Data source](#data-source)
+        - [**Data Collection Period**](#data-collection-period)
+    - [Data processing](#data-processing)
+    - [Key insights](#key-insights)
+        - [Market Analysis](#market-analysis)
+            - [User engagement metrics](#user-engagement-metrics)
+            - [Sales trend](#sales-trend)
+            - [Best selling](#best-selling)
+        - [Store Analysis Example: TP-Link Official Store](#store-analysis-example-tp-link-official-store)
+            - [Sales Surge on October 27](#sales-surge-on-october-27)
+            - [Top-Performing Category: Home Security Cameras](#top-performing-category-home-security-cameras)
+            - [Underperforming Products: No Sales, No Views](#underperforming-products-no-sales-no-views)
+            - [Strategic Opportunities in Networking](#strategic-opportunities-in-networking)
+    - [Recommendations](#recommendations)
+        - [**Aspiring Shopee Sellers**](#aspiring-shopee-sellers)
+        - [**Existing E-commerce Businesses**](#existing-e-commerce-businesses)
+        - [**Researchers and Market Analysts**](#researchers-and-market-analysts)
+        - [**Platform Operators Shopee Mall**](#platform-operators-shopee-mall)
+    - [Final Note](#final-note)
 
 <!-- /TOC -->
 ---
@@ -44,7 +49,7 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 
 ---
 
-#### Key findings
+## Key findings
 
 * **User Engagement Is Dropping**
   Views fell by **23.6%** and likes by **84.8%**, showing reduced customer interest or platform reach.
@@ -63,7 +68,7 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 
 ---
 
-**Key Features**
+### Key Features
 
 📊 **Sales Performance Tracking**
 
@@ -88,7 +93,7 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 
 ---
 
-#### Target Audiences
+### Target Audiences
 
 * **Aspiring Shopee sellers** seeking data-driven insights before entering the market
 * **Existing e-commerce businesses** considering product or category diversification
@@ -100,7 +105,9 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 
 This dashboard is based on **real-world data** collected from the **Shopee Mall Vietnam** platform. The dataset was cleaned and reprocessed to ensure it's ready for reliable analysis.
 
-### 📅 **Data Collection Period**
+Please not this data was collected for educational purposes only.
+
+### **Data Collection Period**
 
 * **Start Date:** August 26, 2021
 * **End Date:** November 4, 2021
@@ -108,8 +115,8 @@ This dashboard is based on **real-world data** collected from the **Shopee Mall 
 
 The analysis focuses on the **most recent 28-day period** before November 4, 2021:
 
-* **Current Period:** October 7, 2021 – November 3, 2021
-* **Comparison Period:** September 9, 2021 – October 6, 2021
+* **Current Period:** October 8, 2021 – November 4, 2021
+* **Comparison Period:** September 10, 2021 – October 7, 2021
 
 This allows for a meaningful comparison of sales trends over two consecutive 28-day periods.
 
