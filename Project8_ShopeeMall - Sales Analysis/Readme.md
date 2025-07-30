@@ -8,9 +8,8 @@
 
 ---
 ## 📚 Table of Contents
-<!-- TOC -->
 - [Overview](#overview)
-- [Key findings](#key-findings)
+- [Key features](#key-features)
 - [Target Audiences](#target-audiences)
 - [Data source](#data-source)
 - [Data processing](#data-processing)
@@ -31,9 +30,6 @@
     - [Platform Operators Shopee Mall](#platform-operators-shopee-mall)
 - [Final Note](#final-note)
 
-<!-- /TOC -->
-
-
 ---
 ## Overview
   
@@ -42,25 +38,6 @@ Build a dynamic and insightful dashboard to visualize the **sales performance of
 ![Dashboard 1](./img/dashboard1.png)  
 
 ![Dashboard 2](./img/dashboard2.png)
-
----
-
-## Key findings
-
-* **User Engagement Is Dropping**
-  Views fell by **23.6%** and likes by **84.8%**, showing reduced customer interest or platform reach.
-
-* **Buyer Feedback Is Increasing**
-  Comments rose by **75%**, indicating more user hesitation or concern post-purchase — a signal to improve product quality or transparency.
-
-* **Sales Can Rise Despite Lower Engagement**
-  Quantity sold grew by **74.7%** and revenue by **9.6%**, driven by targeted brand promotions and high-value items — not overall traffic.
-
-* **Market Splits Between Volume vs. Value**
-  Budget-friendly items (e.g., mice) sell the most units, while premium products (e.g., iPhone, Magic Mouse) lead in revenue — highlighting two clear customer segments.
-
-* **Top Brands Lead Through Focused Strategy**
-  TP-Link, for example, boosted sales by over **160%** with a strong push in home security cameras and a clear promotional peak on **October 27**.
 
 ---
 
