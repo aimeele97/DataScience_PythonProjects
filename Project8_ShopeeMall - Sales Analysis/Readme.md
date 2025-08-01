@@ -31,11 +31,11 @@
 ---
 ## Overview
   
-Build a dynamic and insightful dashboard to visualize the **sales performance of computer-related stores** on **Shopee Mall Vietnam** over the past **28 days**. The dashboard enables users to explore both **store-level** and **category-level** sales trends across a curated selection of **15 electronics and computer stores**.
+This analysis offers aspiring Shopee sellers, existing e-commerce businesses, and researchers a clear view of sales trends for 15 electronics and technology retailers on Shopee Mall Vietnam over the past 28 days. By exploring sales data at both store and category levels, along with the influence of product details and user engagement, the insights provide a data-driven foundation to make informed decisions—whether entering the market, diversifying products, or studying e-commerce trends in Vietnam’s tech retail sector.  
 
-![alt text](img/dashboard.png)
+  ![alt text](img/dashboard.png)
 
-![alt text](img/image-3.png)
+  ![alt text](img/image-3.png)
 
 ---
 
