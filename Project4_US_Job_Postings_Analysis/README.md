@@ -1,52 +1,139 @@
-# Job Postings Analysis and Visualization
+# Data Science Job Salary Analysis & Prediction
 
 ![image.png](img/indeedlogo.png)
 
-## Project Overview
+---
 
-- Develop an automated script to clean job posting data from Indeed. Afterward, visualize the data and build a model to predict future salaries for data scientist positions.
+## **Project Overview**
 
-- The model is built using knowledge gained from the IBM Data Analyst Professional Certificate. I applied this knowledge to test its effectiveness and determine the best metric for the prediction model.
+This project analyzes **US Data Scientist job postings** collected over two months to uncover salary trends and predict expected salaries for different job profiles.
 
-### Business Problem
+The workflow includes:
 
-The company needs to optimize its recruitment for data scientist roles by accurately predicting salary trends. Current analysis of Indeed job postings is unstructured, which can lead to misaligned salary offerings. By automating data cleaning, visualizing trends, and building a predictive model, we aim to enhance hiring competitiveness and attract top talent.
+1. **Data Cleaning** – Handling raw scraped data and preparing it for analysis.
+2. **Exploratory Data Analysis (EDA)** – Exploring patterns in hiring, locations, job levels, salaries, and skills.
+3. **Predictive Modeling** – Using **CatBoost Regressor** to model and predict annual salaries based on job profile features.
 
-### Data Source
-Data is sourced from Kaggle.
+**Key Insights for Stakeholders:**
 
-- **Dataset Link:** [Job Posting Dataset](https://www.kaggle.com/datasets/yusufolonade/data-science-job-postings-indeed-usa)
+* **Company** and **job level** drive the majority of salary differences.
+* **California** dominates hiring, particularly for mid-level and senior roles.
+* Predicted salaries capture **trends**, not exact values—actual pay may vary due to negotiation or unique responsibilities.
 
-### Table of Contents
+---
 
-1. [Data Cleaning](#1-data-cleaning)
-2. [Exploratory Data Analysis (EDA)](#2-exploratory-data-analysis-eda)
-3. [Model Development](#3-model-development)
+## **Data Source**
 
-#### 1. Data Cleaning
+The dataset was collected from Kaggle and contains US Data Scientist job postings for approximately two months.
 
-- Automated data cleaning to create essential columns (e.g., working mode, job level, average salary).
-- Handled missing values, removed duplicates, and adjusted data types.
+* **Raw dataset:** [Raw Data (CSV)](indeed_kaggle.csv)
 
-__Raw Data__  
-![raw-data](img/raw_data.png)
+---
 
-__Clean Data__  
-![clean-data](img/clean_data.png)
+## **Data Preparation & Cleaning**
 
-#### 2. Exploratory Data Analysis (EDA)
+The scraped dataset was **raw and unstructured**, requiring preprocessing before analysis.
 
-- Visualizations include job postings by date, state distribution, and salary trends by job level and work mode.
+* Steps included:
 
-#### 3. Model Development
+  * Handling missing values and inconsistent formatting
+  * Creating new columns such as:
 
-- Developed three models for salary prediction:
-  - **Simple Linear Regression (SLR)**
-  - **Multiple Linear Regression (MLR)**
-  - **Polynomial Regression**
+    * **`Title_level`**: combination of job title and level
+    * **Skill keywords**
+  * Encoding categorical fields for modeling
 
-__DATA VISUALIZATION:__ [Go to Tableau Public](https://public.tableau.com/app/profile/aimee.le9707/viz/job_posting_17304216955380/Dashboard1)
+- **Data cleansing code:** [Cleansing Script](p1-automate_script_clean.ipynb)
+- **Cleaned dataset:** [Cleaned Dataset](completed_file.csv)
 
-### Conclusion
+---
 
-This project developed a predictive model for data scientist salaries using Indeed job postings. Automation of the data cleaning process ensured accuracy by removing duplicates and handling missing values. Key salary trends were identified through visualization, and the selected metric effectively evaluated the model's performance. The model provides valuable insights for strategic hiring and salary optimization, with future enhancements planned for refinement and incorporation of additional data sources.
+## **Exploratory Data Analysis (EDA)**
+
+### **1. Geography & Hiring Trends**
+
+* **California** dominates hiring, driven by tech hubs like Silicon Valley.
+* Most roles are **full-time (~97%)**.
+* **Mid-level and senior positions** are most common; low-level and manager roles are rare.
+
+### **2. Salary Insights**
+
+* Most salaries are below the **median $157K**, representing typical market ranges.
+* Certain companies (e.g., Amazon) pay significantly higher, likely due to **seniority or special responsibilities**.
+
+### **3. Job Levels & Employment Type**
+
+* Entry-level and managerial positions are relatively uncommon.
+* Full-time roles dominate; contract or part-time roles are limited.
+
+**Visualizations Used:** histograms, boxplots, word clouds to explore distributions and patterns.
+
+---
+
+## **Modeling: CatBoost Regressor**
+
+* **Target Variable:** `Annual Salary`
+* **Features:** `Title_level`, `Company`, `State`, `City`, `Employment Type`, `Skill keywords`
+* **Approach:** Categorical and text features handled using **CatBoost Pools**
+
+**Performance Metrics:**
+
+* **Training R²:** 0.70 → explains 70% of variance in training data
+* **Validation R²:** 0.58 → explains 58% of variance in unseen data
+* **Slight overfitting**, but model generalizes reasonably well
+
+**Interpretation:** The model captures **overall salary trends**; individual salaries may vary due to negotiation, experience, or unobserved factors.
+
+* **EDA and modeling code:** [EDA & Modeling Notebook](p2-eda_modeling.ipynb)
+* **Interactive Dashboard (Tableau):** [Job Postings Dashboard](https://public.tableau.com/app/profile/aimee.le9707/viz/job_posting_17304216955380/Dashboard1)
+
+---
+
+## **Feature Importance**
+
+| Feature         | Importance | Interpretation                                     |
+| --------------- | ---------- | -------------------------------------------------- |
+| Company         | 39%        | Employer has the largest impact on salary          |
+| Title + Level   | 21%        | Seniority and role type strongly affect pay        |
+| State           | 16%        | Regional differences influence pay                 |
+| City            | 12%        | Location within state also matters                 |
+| Employment Type | 8%         | Full-time vs contract or part-time affects salary  |
+| Skills          | 4%         | Specific skills have smaller but measurable effect |
+
+**Stakeholder Takeaway:** Salary differences are mostly driven by **company and job level**, followed by location, while skills and employment type are less influential.
+
+---
+
+## **Predicted Salaries**
+
+* Model predicts **expected salary** for a given job profile.
+* Example: A Senior Engineer at Company X in New York receives an estimate aligned with typical market trends.
+* Predictions **capture trends**, not exact figures—individual salaries may differ due to negotiation or hidden factors.
+
+---
+
+## **Recommendations & Next Steps**
+
+1. Use predicted salaries for **budgeting, benchmarking, and market trend insights**.
+2. Enhance features by including **experience, education, work mode, or certifications** to improve accuracy.
+3. Conduct **hyperparameter tuning** using GridSearchCV or Optuna.
+4. Combine CatBoost with **LightGBM or XGBoost** in stacked models for better performance.
+5. Use **K-Fold cross-validation** for robust validation and reduced variance in R².
+6. Communicate results using **salary ranges or bins** instead of exact predictions for clarity.
+
+---
+
+## **Tools & Libraries**
+
+* **Data Manipulation & Analysis:** `pandas`, `numpy`, `collections.Counter`
+* **Visualization:** `matplotlib`, `seaborn`, `wordcloud`
+* **Modeling:** `catboost`, `scikit-learn`
+
+---
+
+## **Key Takeaways**
+
+* **Company** and **job level** are the primary drivers of salary differences.
+* **Location** also influences pay, but skills and employment type have smaller impact.
+* Predictions are **trend indicators** rather than precise figures.
+* Improving model performance requires **more relevant features** to capture hidden factors such as negotiation, responsibilities, and experience.
