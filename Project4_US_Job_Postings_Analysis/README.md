@@ -1,139 +1,237 @@
-# Data Science Job Salary Analysis & Prediction
+# **Data Science Job Salary Analysis & Prediction**
+
+*Exploring trends, cleaning messy job-posting data, and predicting salaries using CatBoost*
 
 ![image.png](img/indeedlogo.png)
 
 ---
 
-## **Project Overview**
+# ** Project Overview**
 
-This project analyzes **US Data Scientist job postings** collected over two months to uncover salary trends and predict expected salaries for different job profiles.
+The data science job market is competitive, fast-changing, and often difficult to interpret. To make sense of hiring patterns and compensation trends, I analyzed a dataset of U.S. data science job postings collected from Kaggle.
 
-The workflow includes:
 
-1. **Data Cleaning** – Handling raw scraped data and preparing it for analysis.
-2. **Exploratory Data Analysis (EDA)** – Exploring patterns in hiring, locations, job levels, salaries, and skills.
-3. **Predictive Modeling** – Using **CatBoost Regressor** to model and predict annual salaries based on job profile features.
+This end-to-end project includes:
 
-**Key Insights for Stakeholders:**
-
-* **Company** and **job level** drive the majority of salary differences.
-* **California** dominates hiring, particularly for mid-level and senior roles.
-* Predicted salaries capture **trends**, not exact values—actual pay may vary due to negotiation or unique responsibilities.
+1. **Automated Data Cleaning** – turning raw web-scraped postings into structured features
+2. **Exploratory Data Analysis (EDA)** – uncovering hiring, location, salary, skill, and seniority trends
+3. **Predictive Modeling** – using **CatBoost** to analyze feature importance and reveal which job attributes most strongly influence salary.
 
 ---
 
-## **Data Source**
+# **🧹 1. Data Preparation & Cleaning (What I Did, Why It Matters)**
 
-The dataset was collected from Kaggle and contains US Data Scientist job postings for approximately two months.
+The raw dataset was **messy**, inconsistent, and incomplete — containing mixed salary formats, embedded metadata in titles, unstructured locations, and missing fields.  
 
-* **Raw dataset:** [Raw Data (CSV)](indeed_kaggle.csv)
+To fix this, I built a **modular cleaning pipeline** (full notebook: [Cleansing Script](p1-automate_script_clean.ipynb)) that transforms raw text into reliable features.
 
----
+### ✔ 1.1. Deduplication & Standardization
 
-## **Data Preparation & Cleaning**
+* Dropped duplicate rows
+* Replaced blank values with NaN
+* Removed irrelevant fields (e.g., job URLs)
 
-The scraped dataset was **raw and unstructured**, requiring preprocessing before analysis.
-
-* Steps included:
-
-  * Handling missing values and inconsistent formatting
-  * Creating new columns such as:
-
-    * **`Title_level`**: combination of job title and level
-    * **Skill keywords**
-  * Encoding categorical fields for modeling
-
-- **Data cleansing code:** [Cleansing Script](p1-automate_script_clean.ipynb)
-- **Cleaned dataset:** [Cleaned Dataset](completed_file.csv)
+👉 **Outcome:** A clean, consistent foundation for grouping, modeling, and aggregation.
 
 ---
 
-## **Exploratory Data Analysis (EDA)**
+### ✔ 1.2. Standardized Company & Title Text
 
-### **1. Geography & Hiring Trends**
+* Applied capitalization
+* Normalized naming to avoid inconsistencies (e.g., "google", “GOOGLE”, “Google”)
 
-* **California** dominates hiring, driven by tech hubs like Silicon Valley.
-* Most roles are **full-time (~97%)**.
-* **Mid-level and senior positions** are most common; low-level and manager roles are rare.
-
-### **2. Salary Insights**
-
-* Most salaries are below the **median $157K**, representing typical market ranges.
-* Certain companies (e.g., Amazon) pay significantly higher, likely due to **seniority or special responsibilities**.
-
-### **3. Job Levels & Employment Type**
-
-* Entry-level and managerial positions are relatively uncommon.
-* Full-time roles dominate; contract or part-time roles are limited.
-
-**Visualizations Used:** histograms, boxplots, word clouds to explore distributions and patterns.
+👉 **Outcome:** Companies and roles became properly grouped, improving insights and reducing noise.
 
 ---
 
-## **Modeling: CatBoost Regressor**
+### ✔ 1.3. Extracted Job Level & Work Mode from the Title
 
-* **Target Variable:** `Annual Salary`
-* **Features:** `Title_level`, `Company`, `State`, `City`, `Employment Type`, `Skill keywords`
-* **Approach:** Categorical and text features handled using **CatBoost Pools**
+Job titles often secretly encode information, such as:
 
-**Performance Metrics:**
+* **Work mode:** remote, hybrid, on-site
+* **Level:** senior, junior, associate, manager, lead
 
-* **Training R²:** 0.70 → explains 70% of variance in training data
-* **Validation R²:** 0.58 → explains 58% of variance in unseen data
-* **Slight overfitting**, but model generalizes reasonably well
+The cleaning pipeline automatically detects these and creates two new features:
+**`Work Mode`** and **`Level`**.
 
-**Interpretation:** The model captures **overall salary trends**; individual salaries may vary due to negotiation, experience, or unobserved factors.
-
-* **EDA and modeling code:** [EDA & Modeling Notebook](p2-eda_modeling.ipynb)
-* **Interactive Dashboard (Tableau):** [Job Postings Dashboard](https://public.tableau.com/app/profile/aimee.le9707/viz/job_posting_17304216955380/Dashboard1)
+👉 **Outcome:** Revealed market structure — mid-level jobs heavily dominate while entry-level roles are rare.
 
 ---
 
-## **Feature Importance**
+### ✔ 1.4. Cleaned and Split Location Data
 
-| Feature         | Importance | Interpretation                                     |
-| --------------- | ---------- | -------------------------------------------------- |
-| Company         | 39%        | Employer has the largest impact on salary          |
-| Title + Level   | 21%        | Seniority and role type strongly affect pay        |
-| State           | 16%        | Regional differences influence pay                 |
-| City            | 12%        | Location within state also matters                 |
-| Employment Type | 8%         | Full-time vs contract or part-time affects salary  |
-| Skills          | 4%         | Specific skills have smaller but measurable effect |
+The raw location strings were inconsistent (“Austin, TX 78701”, “Remote in US”, “San Francisco, CA 94103”).
+The pipeline:
 
-**Stakeholder Takeaway:** Salary differences are mostly driven by **company and job level**, followed by location, while skills and employment type are less influential.
+* Extracted **City** and **State**
+* Normalized remote cities to “Remote”
+* Removed misleading “in …” suffixes
+* Cleaned postal codes
 
----
-
-## **Predicted Salaries**
-
-* Model predicts **expected salary** for a given job profile.
-* Example: A Senior Engineer at Company X in New York receives an estimate aligned with typical market trends.
-* Predictions **capture trends**, not exact figures—individual salaries may differ due to negotiation or hidden factors.
+👉 **Outcome:** Accurate location segmentation and clean geographic analysis.
 
 ---
 
-## **Recommendations & Next Steps**
+### ✔ 1.5. Advanced Salary Extraction
 
-1. Use predicted salaries for **budgeting, benchmarking, and market trend insights**.
-2. Enhance features by including **experience, education, work mode, or certifications** to improve accuracy.
-3. Conduct **hyperparameter tuning** using GridSearchCV or Optuna.
-4. Combine CatBoost with **LightGBM or XGBoost** in stacked models for better performance.
-5. Use **K-Fold cross-validation** for robust validation and reduced variance in R².
-6. Communicate results using **salary ranges or bins** instead of exact predictions for clarity.
+This was the most complex part of cleaning.
+
+Salary fields contained:
+
+* Ranges (`$90k–$120k`)
+* Hourly/day/monthly/yearly formats
+* “shift” emails mistakenly tagged as salary
+* Missing salaries only found in descriptions
+* Fake integers from schedule codes (e.g., “9x80”)
+* Values like (`120k`) or (`$150,000`)
+
+The pipeline handled this by:
+
+1. Extracting digits & ranges
+2. Using description text to fill missing salaries
+3. Removing false positives
+4. Identifying **Pay Type** (hour, day, week, month, year)
+5. Converting everything to **annual salary**
+6. Calculating reliable **Average Salary**
+7. Manually correcting anomalies (e.g., L3Harris “9x80” case)
+
+👉 **Outcome:** A usable, numeric salary field — essential for modeling.
 
 ---
 
-## **Tools & Libraries**
+### ✔ 1.6. Final Cleaning Output
 
-* **Data Manipulation & Analysis:** `pandas`, `numpy`, `collections.Counter`
-* **Visualization:** `matplotlib`, `seaborn`, `wordcloud`
-* **Modeling:** `catboost`, `scikit-learn`
+After cleaning, these columns were retained:
+
+* **Date**, **Title**, **Company**, **State**, **City**
+* **Level**, **Work Mode**
+* **Average Salary**, **Pay Type**, **Employment Type**
+* **Description**
+
+📄 **Cleaned dataset:** [completed_file.csv](completed_file.csv)
 
 ---
 
-## **Key Takeaways**
+# **2. Exploratory Data Analysis (EDA)**
 
-* **Company** and **job level** are the primary drivers of salary differences.
-* **Location** also influences pay, but skills and employment type have smaller impact.
-* Predictions are **trend indicators** rather than precise figures.
-* Improving model performance requires **more relevant features** to capture hidden factors such as negotiation, responsibilities, and experience.
+Full EDA notebook: [EDA & Modeling Notebook](p2-eda_modeling.ipynb)
+
+### ⭐ Geography & Hiring Trends
+
+* **California** dominates job postings, driven by tech hubs
+* Most roles are **full-time (~97%)**
+* **Mid-level and senior** roles make up the majority
+* Entry-level and managerial positions are uncommon
+
+### ⭐ Salary Insights
+
+* Median annual salary ~**$157K**
+* Salaries cluster below the median because of many mid-level roles
+* Certain companies (Amazon, Meta, etc.) pay much higher — mostly for senior or specialized roles
+
+### ⭐ Job Levels & Work Types
+
+* Entry-level roles represent **less than 1%**
+* Senior / Staff / Lead roles are heavily represented
+* Work mode is often missing, but remote roles show clear clustering by industry
+
+### ⭐ Skill Analysis
+
+Most frequently mentioned skills include:
+
+* **Machine Learning**
+* **Artificial Intelligence**
+* **Deep Learning**
+* **R**
+
+Python, SQL, AWS, and Tableau appear less often in text, likely because many employers describe capabilities rather than listing tools.
+
+**Interactive Dashboard**:
+👉 [Tableau Job Posting Dashboard](https://public.tableau.com/app/profile/aimee.le9707/viz/job_posting_17304216955380/Dashboard1)
+
+---
+
+# **3. Predictive Modeling: CatBoost Regressor**
+
+### **Target:** Annual Salary
+
+### **Features included:**
+
+* Title + Level
+* Company
+* State & City
+* Skills (extracted from descriptions)
+* Employment Type
+* Work Mode
+
+CatBoost efficiently handled categorical data using built-in encodings and achieved:
+
+### **Performance**
+
+* **Training R²:** 0.70
+* **Validation R²:** 0.58
+* Mild overfitting but strong generalization
+* Captures salary *patterns*, not exact values
+
+### Feature Importance
+
+| Feature             | Importance | Meaning                                                  |
+| ------------------- | ---------- | -------------------------------------------------------- |
+| **Company**         | 39%        | Employer identity is the strongest salary determinant    |
+| **Title + Level**   | 21%        | Seniority and specialization significantly influence pay |
+| **State**           | 16%        | Regional differences matter (e.g., CA vs Midwest)        |
+| **City**            | 12%        | Urban hubs drive higher compensation                     |
+| **Employment Type** | 8%         | Full-time vs contract influences salary range            |
+| **Skills**          | 4%         | Skill lists matter but have far less impact              |
+
+### Interpretation
+
+The model reflects reality:
+💼 **Who you work for** and **what level you're at** matter more than any skill you list.
+
+---
+
+# **Predicted Salaries**
+
+The model can predict annual salary given:
+
+* Job title + seniority
+* Company
+* State / City
+* Description keywords
+
+Predictions follow macro trends and are useful for salary benchmarking — not exact compensation levels.
+
+---
+
+# **Recommendations & Next Steps**
+
+1. **Enhance the model** with:
+
+   * Experience years
+   * Work mode
+   * Education level
+   * Industry sector
+2. Apply **hyperparameter tuning** (Optuna / GridSearch)
+3. Try **stacking CatBoost + LightGBM + XGBoost**
+4. Use **cross-validation** for stronger generalization
+5. Visualize salary bands rather than exact predictions for clarity
+
+---
+
+# **Tools & Libraries**
+
+* **pandas**, **numpy**
+* **matplotlib**, **seaborn**, **wordcloud**
+* **catboost**, **scikit-learn**
+
+---
+
+# **Final Takeaways**
+
+* Salary differences are primarily driven by **company** and **job level**
+* Location plays an important but secondary role
+* Skill lists influence salary less than expected
+* CatBoost predictions provide realistic salary trend estimates
+* Data science roles are concentrated in tech-heavy states and mid-senior levels
+
