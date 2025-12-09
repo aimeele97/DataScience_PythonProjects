@@ -19,7 +19,7 @@ This end-to-end project includes:
 
 ---
 
-# **🧹 1. Data Preparation & Cleaning (What I Did, Why It Matters)**
+# **1. Data Preparation & Cleaning (What I Did, Why It Matters)**
 
 The raw dataset was **messy**, inconsistent, and incomplete — containing mixed salary formats, embedded metadata in titles, unstructured locations, and missing fields.  
 
