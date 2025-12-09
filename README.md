@@ -1,72 +1,43 @@
-# 📊 Data Science Portfolio
+# Data Science Python Projects
 
-Welcome to my collection of Python-based data science projects. This repository showcases my proficiency in data cleaning, exploration, visualization, and predictive modeling. Each project is designed to solve real-world problems using data-driven approaches.
+This repository contains a collection of data science projects showcasing skills in data cleaning, analysis, prediction modeling, and web scraping using Python. Each project folder contains the code, data (if applicable), and documentation.
 
 ---
 
-## 📁 Project Overview
 
-### 1. **Project1\_Weather\_Forecast**
-
-* **Objective**: Visualize and forecast weather patterns.
-* **Key Skills**: Data visualization, time series forecasting.
-* **Link**: [Project1\_Weather\_Forecast](https://github.com/aimeele97/Python_Projects/tree/main/Project1_Weather_Forecast)
-
-### 2. **Project2\_Weather\_Analysis\_For\_Bike\_Rides**
-
-* **Objective**: Analyze weather data to understand its impact on bike ride patterns.
-* **Key Skills**: Data analysis, correlation studies.
-* **Link**: [Project2\_Weather\_Analysis\_For\_Bike\_Rides](https://github.com/aimeele97/Python_Projects/tree/main/Project2_Weather_Analysis_For_Bike_Rides)
-
-### 3. **Project3\_Loan\_Approval\_Prediction**
-
-* **Objective**: Build a model to predict loan approval outcomes.
-* **Key Skills**: Machine learning, classification algorithms.
-* **Link**: [Project3\_Loan\_Approval\_Prediction](https://github.com/aimeele97/Python_Projects/tree/main/Project3_Loan_Approval_Prediction)
-
-### 4. **Project4\_US\_Job\_Postings\_Analysis**
+### [Project1\_Data\_Scientist_Job_Salary_Analysis](https://github.com/aimeele97/Python_Projects/tree/main/Project4_US_Job_Postings_Analysis)
 
 * **Objective**: Analyze U.S. job postings to extract insights.
 * **Key Skills**: Text analysis, data visualization.
-* **Link**: [Project4\_US\_Job\_Postings\_Analysis](https://github.com/aimeele97/Python_Projects/tree/main/Project4_US_Job_Postings_Analysis)
 
-### 5. **Project5\_Insurance\_Claim\_Prediction**
+### [Project2\_Shopee\_Store\_Performance](https://github.com/aimeele97/Python_Projects/tree/main/Project8_Shopee_Store_Performance)
+
+### [Project3\_Insurance\_Claim\_Prediction](https://github.com/aimeele97/Python_Projects/tree/main/Project5_Insurance_Claim_Prediction)
 
 * **Objective**: Predict insurance claim likelihood.
 * **Key Skills**: Predictive modeling, data preprocessing.
-* **Link**: [Project5\_Insurance\_Claim\_Prediction](https://github.com/aimeele97/Python_Projects/tree/main/Project5_Insurance_Claim_Prediction)
 
-### 6. **Project6\_Fraudulent\_Detection\_Model**
+### [Project4\_Weather\_Prediction\_Feature\_Analysis](https://github.com/aimeele97/Python_Projects/tree/main/Project1_Weather_Prediction_Feature_Analysis)
 
-* **Objective**: Detect fraudulent transactions using machine learning.
-* **Key Skills**: Anomaly detection, classification models.
-* **Link**: [Project6\_Fraudulent\_Detection\_Model](https://github.com/aimeele97/Python_Projects/tree/main/Project6_Fraudulent_Detection_Model)
+- **Objective:** Predict whether it will rain tomorrow by cleaning, exploring, and modeling weather data. The project applies Logistic Regression, Random Forest, and XGBoost, with feature importance analysis to identify key weather factors.
 
-### 7. **Project7\_Web\_Scraping**
+- **Skills:** Data cleaning, feature engineering, EDA, classification modeling, feature importance interpretation.
 
-* **Objective**: Extract data from websites for analysis.
-* **Key Skills**: Web scraping, data extraction.
-* **Link**: [Project7\_Web\_Scraping](https://github.com/aimeele97/Python_Projects/tree/main/Project7_Web_Scraping)
+- **Outcome:** XGBoost achieved the highest accuracy (**85.9%**). Humidity3pm and Sunshine were the most influential predictors.
 
-### 8. **Project8\_Shopee\_Store\_Performance**
-
-* **Objective**: Analyze Shopee store performance metrics.
-* **Key Skills**: Data analysis, performance metrics evaluation.
-* **Link**: [Project8\_Shopee\_Store\_Performance](https://github.com/aimeele97/Python_Projects/tree/main/Project8_Shopee_Store_Performance)
+- **Next Steps:** Improve feature engineering, apply hyperparameter tuning, use cross-validation, and explore advanced ensemble models for better performance.
   
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Programming Languages**: Python
-* **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, BeautifulSoup
-* **Tools**: Jupyter Notebook, Git, GitHub
+* **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, BeautifulSoup
+* **Tools**: Jupyter Notebook, VS Code
 
 ---
 
-## 📌 Getting Started
-
-To explore these projects locally:
+## Explore these projects locally:
 
 1. Clone the repository:
 
@@ -94,7 +65,7 @@ To explore these projects locally:
 
 ---
 
-## 📄 License
+## License
   
 MIT license  
   

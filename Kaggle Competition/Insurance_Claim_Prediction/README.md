@@ -1,4 +1,4 @@
-Here's the updated README with a section for the prediction model added. 
+
 # Vehicle Insurance Claim Analysis - Prediction
 
 This project analyzes a dataset related to vehicle insurance claims to derive insights and potentially inform policy adjustments.

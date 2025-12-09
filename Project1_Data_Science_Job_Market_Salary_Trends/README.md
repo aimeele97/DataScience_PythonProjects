@@ -1,4 +1,4 @@
-# **Data Science Job Salary Analysis & Prediction**
+# Data Science Job Market Analysis & Salary Trends
 
 *Exploring trends, cleaning messy job-posting data, and predicting salaries using CatBoost*
 
