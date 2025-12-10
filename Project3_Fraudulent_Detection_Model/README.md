@@ -120,8 +120,3 @@ Logistic Regression, Random Forest, and Gradient Boosting models were trained an
 2. Explore ensemble methods or hyperparameter tuning to improve the performance.
 3. Deploy the model and test it on real-time data to evaluate how it handles real-world fraud detection scenarios.
 
-## License 
-
-MIT license
-
-Copyright (c) [2024] [Aimee Le]
