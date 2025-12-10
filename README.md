@@ -14,7 +14,7 @@ This repository contains a collection of Python-based data analytics projects fo
 
 * **Objective**: Use Python to extract product categories from product names in the Shopee e-commerce dataset and map these categories to a new column for better data organization and visualization.  
 * **Key Skills**: Data cleaning, text manipulation, mapping, Tableau visualization.
-* **Outcome**: Created a sales dashboard with three tabs to visualize insights from 15 different electronics stores. The dashboard enables easy identification of trends and patterns, helping stakeholders make informed decisions on sales strategies.
+* **Outcome**: Created a sales dashboard to visualize insights from 15 different electronics stores. The dashboard enables easy identification of trends and patterns, helping stakeholders make informed decisions on sales strategies.
 
 ### [Project 3: Fraudulent Detection Model](https://github.com/aimeele97/Python_Projects/tree/main/Project3_Fraudulent_Detection_Model)
 

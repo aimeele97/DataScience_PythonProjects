@@ -1,4 +1,4 @@
-# Shopee Mall Vietnam: 28-Day Sales Overview by Store
+# Shopee Mall (E-Commerce Website): Sales Insight
 
 > **Tools:** Jupyter Notebook, Python, Tableau  
 > **Techniques:** Data transformation, Analysis, Visualization  
