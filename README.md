@@ -1,6 +1,6 @@
 # Python Projects
 
-This repository contains a collection of Python-based data analytics projects focusing on data cleaning, manipulation, analysis, and generating actionable insights for stakeholders. The projects are designed to assist in making data-driven decisions. Each project includes code, data (when applicable), and documentation.
+This repository contains a collection of Python-based data analytics projects focusing on data cleaning, manipulation, analysis, and generating actionable insights for stakeholders.
 
 ---
 
