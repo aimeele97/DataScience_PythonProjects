@@ -7,7 +7,6 @@ This repository contains a collection of Python-based data analytics projects fo
 ### [Project 1: Data Scientist Job Salary Analysis](https://github.com/aimeele97/Python_Projects/tree/main/Project1_Data_Science_Job_Market_Salary_Trends)
 
 * **Objective**: Clean and extract insights from the U.S. job market, building a CatBoost model to identify the factors influencing salaries.
-* **Key Skills**: Data cleaning, exploratory data analysis (EDA), visualization, predictive modeling, regression algorithms, feature importance.
 * **Outcome**: CatBoost model achieved **58%** accuracy, explaining 58% of the variation in annual salaries. Company and job level are the most important factors influencing salary.
 
 ### [Project 2: Shopee Mall Sales Dashboard](https://github.com/aimeele97/Python_Projects/tree/main/Project2_Shopee_Mall_Sales_Dashboard)
